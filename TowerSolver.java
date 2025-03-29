@@ -29,6 +29,6 @@ public class TowerSolver {
     solve(a-1, start, spare, end);
     model.move(start, end);
     model.print();
-    solve(n-1, spare, end, start);
+    solve(a-1, spare, end, start);
     }
 }
