@@ -24,12 +24,13 @@ public class TestSuite {
         // Check initial state
         expectEqual(towers[0].get(0), 2, "tower0 should contain 2");
 
+
         // Move a disk
         tiny.move(0, 2);
 
         // Check that move succeeded.
         expectEqual(towers[2].get(0), 1, "disk 1 should move to tower2");
-
+    
         // Illegal move
         tiny.move(0, 2);
 
