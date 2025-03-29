@@ -48,7 +48,14 @@ public class TowerModel {
     {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
         
-        
+        int s = towers[source].peek();
+        int d = towers[destination].peek();
+
+        if (s != 0 && (d==0 || s < d)){
+            towers[d].push(towers[source].pop());
+        }
+
+
         int value = towers[source].pop();
         towers[destination].push(value);
     }
