@@ -52,12 +52,11 @@ public class TowerModel {
         int d = towers[destination].peek();
 
         if (s != 0 && (d==0 || s < d)){
-            towers[d].push(towers[source].pop());
+            towers[destination].push(towers[source].pop());
         }
 
 
-        int value = towers[source].pop();
-        towers[destination].push(value);
+
     }
 
     // Helper method to nicely print the current model state.
