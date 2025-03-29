@@ -25,10 +25,10 @@ public class TowerSolver {
             model.print();
             return;
         }
-    }
+
     solve(a-1, start, spare, end);
     model.move(start, end);
     model.print();
     solve(n-1, spare, end, start);
-    
+    }
 }
