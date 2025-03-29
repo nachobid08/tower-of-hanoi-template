@@ -19,16 +19,21 @@ public class TowerSolver {
     // [ solve method here]
     //
 
-    private void solve(int a, int start, int end, int spare) {
+    private void solve(int a, int start, int end, int spare) 
+    {
         if (a==1){
             model.move(start, end);
             model.print();
             return;
         }
 
-    solve(a-1, start, spare, end);
-    model.move(start, end);
-    model.print();
-    solve(a-1, spare, end, start);
+        solve(a-1, start, spare, end);
+        model.move(start, end);
+        model.print();
+        solve(a-1, spare, end, start);
+    
     }
+
+
+
 }
